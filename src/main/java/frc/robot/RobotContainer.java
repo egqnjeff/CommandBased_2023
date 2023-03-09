@@ -10,6 +10,7 @@ import com.pathplanner.lib.PathPlanner;
 import frc.board.ArmTab;
 import frc.board.AutonomousTab;
 import frc.board.ClawTab;
+import frc.board.CommandTab;
 import frc.board.DriveTrainTab;
 import frc.board.GroundIntakeTab;
 import frc.board.RobotTab;
@@ -171,6 +172,7 @@ public class RobotContainer {
     DriveTrainTab.getInstance();
     GroundIntakeTab.getInstance();
     VisionTab.getInstance();
+    CommandTab.getInstance();
   }
 
   /**
