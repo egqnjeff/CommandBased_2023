@@ -182,7 +182,7 @@ public class RobotContainer {
     bind_RC_GamePiece();
     bind_RC_RearIntake();
 
-    bind_Auto_Tests();
+    // bind_Auto_Tests();
   }
 
   // expected to be temporary
