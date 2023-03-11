@@ -91,11 +91,17 @@ public class TelescopePIDSubsystem extends PIDSubsystem {
   
   private void updateManualLimits() {
     if(m_ArmTab.getArmAngle() <= ArmConstants.kArmRotateLowerDegrees) {
+      if(getArmExtensionInches() > ArmConstants.kArmExtendUpperMaxInches) {
+        setSetpoint(ArmConstants.kArmExtendUpperMaxInches);
+      };
       setSoftLimits(
         ArmConstants.kArmExtendMinInches,
         ArmConstants.kArmExtendUpperMaxInches);
     }
     else {
+      if(getArmExtensionInches() > ArmConstants.kArmExtendLowerMaxInches) {
+        setSetpoint(ArmConstants.kArmExtendLowerMaxInches);
+      };
       setSoftLimits(
         ArmConstants.kArmExtendMinInches,
         ArmConstants.kArmExtendLowerMaxInches);
