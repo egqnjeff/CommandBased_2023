@@ -116,4 +116,7 @@ public class ArmConstants {
 
     public static final double kArmStowDelay = 0.5;
 
+    // Dunk rotation speed
+    public static final double kDunkRotationSpeedMagnitude = 0.5;
+
 }

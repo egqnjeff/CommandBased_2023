@@ -4,9 +4,7 @@
 
 package frc.robot.commands.driver;
 
-import edu.wpi.first.wpilibj2.command.ParallelDeadlineGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import edu.wpi.first.wpilibj2.command.WaitCommand;
 import frc.robot.RobotShared;
 import frc.robot.commands.basic.ArmRotateRelative;
 import frc.robot.commands.basic.ClawScore;
@@ -20,9 +18,7 @@ public class DunkScore extends SequentialCommandGroup {
     m_robotShared = RobotShared.getInstance();
 
     addCommands(
-      new ParallelDeadlineGroup(
-        new WaitCommand(m_robotShared.calculateArmRotateRelativeDelay()),
-        new ArmRotateRelative(m_robotShared.calculateRelativeArmSetpoint())),
+      new ArmRotateRelative(m_robotShared.calculateRelativeArmSetpoint()),
       new ClawScore());
   }
 
